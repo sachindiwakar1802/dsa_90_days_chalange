@@ -1,14 +1,17 @@
 function array_equal(arr1,arr2){
   let res = []
   if(arr1.length===arr2.length){
+  let found = false;
     for(let i = 0;i<arr1.length;i++){
+    
       for(let j=0;j<arr2.length;j++){
-        if(arr1[i]!==arr2[j]){
-          //console.log(j)
+        if(arr1[i]===arr2[j]){
+           found=true;
+           break;
         }
       }
     }
-  return 1
+if(!found) return false;
   }
   return -1
 }
